@@ -1,13 +1,13 @@
 function firstWord(s) {
   // your code here
+	s = s.trimStart()
 	 let res = "";
   
       for(let i = 0; i < s.length; i++){
-          if(s.charAt(i) === " " && res !== ""){
+          if(s.charAt(i) === " "){
               break;
-          }else{
-              res = res + s.charAt(i);
           }
+		  res = res + s.charAt(i);
       }
   
       return res;
